@@ -28,6 +28,8 @@
       */
 
       const changePcontent = function () {
+        let pTag = document.querySelector('div p')
+        pTag.innerText = "Hello everybody!"
         //
       };
 
@@ -36,7 +38,10 @@
       */
 
       const changeUrls = function () {
+
         //
+        document.querySelector('a').innerText = "google"
+        document.querySelector('a').href = "https://www.google.com"
       };
 
       /* EXERCISE 5
@@ -116,6 +121,9 @@
   <body>
     <button type="button" onclick="changeTitle("This is Strive School")">Set background color</button>
     <button type="button" onclick="addClassToTitle()">change Header</button>
+    <button type="button" onclick="changePcontent()">change p</button>
+    <button type="button" onclick="changeUrls()">change link</button>
+    
     <header>
       <h1>This is the title of the page</h1>
       <h2>This is the subtitle of the page</h2>
