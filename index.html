@@ -92,14 +92,24 @@
       */
 
       const makeItClickable = function () {
+        let color = getRandomColor()
+        let heading = document.querySelector('h1')
+         heading.style.color = color
         //
       };
+      const getRandomColor = function () {
+       let red = Math.round(Math.random() * 255)
+       let green = Math.round(Math.random() * 255)
+       let blue = Math.round(Math.random() * 255)
+       return "rgb(" + red +", " + green + ", " + blue + ")"
+     }
 
       /* EXERCISE 10
       Change the footer text with something else when the user clicks on it.
       */
 
       const changeFooterText = function () {
+        document.querySelector('footer').innerText = "whatever!!!!!!!!!!!!!!!!!!!!"
         //
       };
 
@@ -139,10 +149,8 @@
     <button type="button" onclick="firstUlDisappear()">firstUl</button>
     <button type="button" onclick="paintItGreen()">Ul Green</button>
     
-
-    
     <header>
-      <h1>This is the title of the page</h1>
+      <h1 onclick="makeItClickable()">This is the title of the page</h1>
       <h2>This is the subtitle of the page</h2>
     </header>
 
@@ -176,7 +184,7 @@
       </div>
     </main>
 
-    <footer>
+    <footer onclick="changeFooterText()">
       <p>And this text is just for the exercise too!</p>
     </footer>
   </body>
