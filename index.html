@@ -7,16 +7,21 @@
       */
 
       const changeTitle = function (newTitle) {
-        //
+        let title = document.querySelector('h1')
+        title.innerText = newTitle
       };
+    
 
       /* EXERCISE 2
       Write a function for changing the class of the title of the page in "myHeading".
       */
 
       const addClassToTitle = function () {
+        let  addClass = document.querySelector('h1')
+        addClass.classList.add('myHeading')
         //
       };
+      
 
       /* EXERCISE 3
       Write a function for changing the text of only the p which are children of a div.
@@ -109,6 +114,8 @@
     </style>
   </head>
   <body>
+    <button type="button" onclick="changeTitle("This is Strive School")">Set background color</button>
+    <button type="button" onclick="addClassToTitle()">change Header</button>
     <header>
       <h1>This is the title of the page</h1>
       <h2>This is the subtitle of the page</h2>
