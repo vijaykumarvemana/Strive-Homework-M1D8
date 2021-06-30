@@ -38,32 +38,32 @@
       */
 
       const changeUrls = function () {
-
-        //
-        document.querySelector('a').innerText = "google"
-        document.querySelector('a').href = "https://www.google.com"
+          document.querySelector('a').innerText = "google"
+          document.querySelector('a').href = "https://www.google.com"
       };
 
       /* EXERCISE 5
        Write a function for adding a new item in the second list.
        */
-
-      const addToTheSecond = function (content) {
         //
-        let  addItem = document.querySelector('#secondList li')
-        addItem.appendChild(document.createTextNode('item')) 
-      
+        const addToTheSecond = function (content) {
+        const ul = document.querySelectorAll("ul")[1];
+        ul.innerHTML += `<li>${content}</li>`;
+        // const li = document.createElement("li");
+        // li.innerText = "new list item";
+        // ul.appendChild(li);
       };
+      addToTheSecond("new item");
 
       /* EXERCISE 6
       Write a function for adding a second paragraph to the div.
       */
 
       const addParagraph = function (content) {
-        //
-        let pTag = document.querySelector('div')
-        pTag.appendChild(createElement('p'))
+        const div = document.querySelectorAll("div")[0];
+        div.innerHTML += `<p>${content}</p>`;
       };
+      addParagraph("new paragraph");
 
       /* EXERCISE 7
       Write a function for making the first UL disappear.
@@ -94,14 +94,14 @@
       const makeItClickable = function () {
         let color = getRandomColor()
         let heading = document.querySelector('h1')
-         heading.style.color = color
+        heading.style.color = color
         //
       };
       const getRandomColor = function () {
-       let red = Math.round(Math.random() * 255)
-       let green = Math.round(Math.random() * 255)
-       let blue = Math.round(Math.random() * 255)
-       return "rgb(" + red +", " + green + ", " + blue + ")"
+        let red = Math.round(Math.random() * 255)
+        let green = Math.round(Math.random() * 255)
+        let blue = Math.round(Math.random() * 255)
+        return "rgb(" + red +", " + green + ", " + blue + ")"
      }
 
       /* EXERCISE 10
@@ -118,6 +118,10 @@
       */
     
       const inputField = document.getElementById("input-field");
+      document.onkeypress = function (e) {
+        console.log(inputField.value)
+      };
+
       // ...
       
       /* EXERCISE 12
@@ -126,7 +130,7 @@
 
       window.onload = function () {
         //
-        alert('the page successfully loaded')
+        alert('the page successful')
       };
 
       /* EXERCISE 13
@@ -145,8 +149,6 @@
     <button type="button" onclick="addClassToTitle()">change Header</button>
     <button type="button" onclick="changePcontent()">change p</button>
     <button type="button" onclick="changeUrls()">change link</button>
-    <button type="button" onclick="addToTheSecond()">addind secondlist</button>
-    <button type="button" onclick="addParagraph()">add P</button>
     <button type="button" onclick="firstUlDisappear()">firstUl</button>
     <button type="button" onclick="paintItGreen()">Ul Green</button>
     
