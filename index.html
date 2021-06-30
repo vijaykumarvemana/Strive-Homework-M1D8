@@ -50,6 +50,9 @@
 
       const addToTheSecond = function (content) {
         //
+        let  addItem = document.querySelector('#secondList li')
+        addItem.appendChild(document.createTextNode('item')) 
+      
       };
 
       /* EXERCISE 6
@@ -58,6 +61,8 @@
 
       const addParagraph = function (content) {
         //
+        let pTag = document.querySelector('div')
+        pTag.appendChild(createElement('p'))
       };
 
       /* EXERCISE 7
@@ -66,6 +71,8 @@
 
       const firstUlDisappear = function () {
         //
+        let firstUl = document.querySelector('ul')
+        firstUl.remove()
       };
 
       /* EXERCISE 8
@@ -73,6 +80,10 @@
       */
 
       const paintItGreen = function () {
+        let everyUl = document.querySelectorAll('ul')
+        for(let ul of everyUl ){
+          ul.style.color = "green"
+        }
         //
       };
 
@@ -119,10 +130,16 @@
     </style>
   </head>
   <body>
-    <button type="button" onclick="changeTitle("This is Strive School")">Set background color</button>
+    <button type="button" onclick=changeTitle("hello")>change Title</button>
     <button type="button" onclick="addClassToTitle()">change Header</button>
     <button type="button" onclick="changePcontent()">change p</button>
     <button type="button" onclick="changeUrls()">change link</button>
+    <button type="button" onclick="addToTheSecond()">addind secondlist</button>
+    <button type="button" onclick="addParagraph()">add P</button>
+    <button type="button" onclick="firstUlDisappear()">firstUl</button>
+    <button type="button" onclick="paintItGreen()">Ul Green</button>
+    
+
     
     <header>
       <h1>This is the title of the page</h1>
